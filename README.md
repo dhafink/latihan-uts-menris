@@ -22,6 +22,7 @@ Soal lainnya berbahasa Indonesia. Semua pembahasan berbahasa Indonesia.
 2. Klik jawaban. Jawaban benar berwarna hijau, pilihan yang salah berwarna merah, lalu pembahasannya muncul.
 3. Di akhir sesi ada skor per topik dan tombol **Ulangi yang salah**.
    Kalau ada jawaban salah, muncul foto penyemangat dengan pesan yang diketik. Kalau semuanya benar, muncul hujan love.
+   Pratinjau tanpa mengerjakan soal: [semua benar](https://dhafink.github.io/latihan-uts-menris/#love) · [ada yang salah](https://dhafink.github.io/latihan-uts-menris/#salah).
 
 **Essay**
 1. Klik **Mulai latihan essay**.
@@ -33,9 +34,9 @@ Shortcut keyboard di soal pilihan ganda: `1`–`4` atau `A`–`D` untuk memilih 
 
 ## Sumber soal
 Setiap soal diberi label sumbernya:
-- **Review Question asli Ch.1**: 10 soal kuis asli Chapter 1 tortoic, dalam bahasa Inggris.
-- **Materi tortoic Ch.1**: disusun dari materi *Risk vs Problem* dan *Risk, Problem, Crisis, and Disaster*, termasuk kasus RAX.
-- **Slide dosen**: dari slide *Governance and Risk Management* Sesi 1 dan *Corporate Governance* Sesi 2.
+- **Soal asli tortoic**: 10 Review Questions asli Chapter 1 tortoic, dalam bahasa Inggris. Hanya salah ketik yang membingungkan yang dirapikan.
+- **Materi tortoic**: disusun dari materi *Risk vs Problem* dan *Risk, Problem, Crisis, and Disaster*, termasuk kasus RAX.
+- **Slide kuliah**: dari slide *Governance and Risk Management* (Sesi 1) dan *Corporate Governance* (Sesi 2).
 - **Literatur ISO/COSO**: topik 2–4 disusun dari ISO 31000:2018/2009 serta COSO ERM 2004 dan 2017, karena materi tortoic chapter itu belum tersedia.
 
 Soal cerita dilengkapi kotak kasus. Soal tentang diagram dilengkapi gambar, misalnya tangga *uncertainty → disaster*, arsitektur ISO 31000, 8 prinsip, kubus COSO, struktur dewan, dan diagram Alijoyo.

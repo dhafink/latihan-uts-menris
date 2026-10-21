@@ -255,7 +255,7 @@
 
   window.KASUS = {
     rax: {
-      title: "Kasus RAX (materi Chapter 1)",
+      title: "Kasus RAX",
       text: "RAX adalah perusahaan manufaktur yang sudah beroperasi lebih dari 50 tahun di industri fashion. RAX mengalami pergeseran tren bisnis yang cukup drastis, seiring perubahan tren fashion yang sangat cepat.\n\nKarena RAX adalah perusahaan keluarga yang sangat memegang nilai-nilai leluhurnya, RAX tidak mampu merespons situasi ini. Akibatnya RAX terpapar masalah reputasi (reputational problem) karena berita buruk tentangnya menyebar di media internasional.\n\nMasalah ini makin parah ketika konsumen kehilangan minat menggunakan layanan RAX, dan akhirnya membawa krisis bagi RAX.\n\nRAX juga tidak mengelola krisis itu dengan baik. RAX menyatakan bangkrut setelah memiliki utang US$100 miliar, sebuah bencana (disaster) yang jelas bagi perusahaan."
     },
     nusakopi: {
@@ -267,20 +267,20 @@
       text: "RS Medika adalah rumah sakit swasta dengan 200 tempat tidur.\n\n• Seluruh urusan manajemen risiko diserahkan kepada satu staf di unit mutu; bagian lain tidak terlibat.\n• Formulir dan kriteria risikonya disalin langsung dari template milik sebuah bank.\n• Daftar risiko hanya diperbarui tiga tahun sekali, padahal dalam setahun terakhir terbit aturan baru BPJS dan muncul dua rumah sakit pesaing.\n• Perawat enggan melaporkan insiden keselamatan pasien karena takut disalahkan.\n• Penilaian risiko dibuat berdasarkan perasaan direksi, tanpa data insiden.\n• Dokter dan perwakilan pasien tidak pernah dimintai pendapat.\n• Insiden yang terjadi tidak pernah dievaluasi untuk diambil pelajarannya."
     },
     pesawat: {
-      title: "Kasus #1 Sesi 1: Who would you trust with your life?",
-      text: "Bayangkan kamu harus terbang dari Bandung ke Singapura malam ini. Sebelum naik pesawat, kamu mengetahui bahwa:\n• maskapai melewatkan sebagian pemeriksaan perawatan (maintenance checks) untuk menghemat biaya;\n• sebagian pilot belum menyelesaikan pelatihan wajibnya;\n• laporan keselamatan disembunyikan dari regulator.\n\nDosen bertanya: berapa dari kalian yang masih mau naik pesawat itu?"
+      title: "Kasus pesawat: Who would you trust with your life?",
+      text: "Bayangkan kamu harus terbang dari Bandung ke Singapura malam ini. Sebelum naik pesawat, kamu mengetahui bahwa:\n• maskapai melewatkan sebagian pemeriksaan perawatan (maintenance checks) untuk menghemat biaya;\n• sebagian pilot belum menyelesaikan pelatihan wajibnya;\n• laporan keselamatan disembunyikan dari regulator.\n\nPertanyaannya: masih mau naik pesawat itu?"
     },
     universitas: {
-      title: "Kasus #2 Sesi 1: Cerita dua universitas",
-      text: "Universitas A: dosen datang tepat waktu; ujian adil; bantuan biaya jatuh ke mahasiswa yang layak; aturan akademik diterapkan konsisten; keluhan mahasiswa didengar.\n\nUniversitas B: sebagian mahasiswa bisa membeli nilai; catatan kehadiran dimanipulasi; beasiswa jatuh ke kerabat atau teman; keluhan diabaikan; aturan berlaku berbeda untuk orang yang berbeda.\n\nDosen bertanya: kamu memilih kuliah di universitas mana, dan mengapa?"
+      title: "Kasus dua universitas",
+      text: "Universitas A: dosen datang tepat waktu; ujian adil; bantuan biaya jatuh ke mahasiswa yang layak; aturan akademik diterapkan konsisten; keluhan mahasiswa didengar.\n\nUniversitas B: sebagian mahasiswa bisa membeli nilai; catatan kehadiran dimanipulasi; beasiswa jatuh ke kerabat atau teman; keluhan diabaikan; aturan berlaku berbeda untuk orang yang berbeda.\n\nPertanyaannya: kamu pilih kuliah di universitas mana, dan kenapa?"
     },
     jembatan: {
-      title: "Kasus #3 Sesi 1: Cerita jembatan",
-      text: "Pemerintah kota membangun jembatan dengan anggaran Rp2 triliun. Sebagian pejabat diam-diam menerima suap, kontraktor memakai material lebih murah di bawah spesifikasi, dan laporan inspeksi dipalsukan. Jembatan diresmikan dan warga merayakannya.\n\nDua tahun kemudian jembatan runtuh. Keluarga kehilangan orang tercinta, usaha berhenti beroperasi, dan kota kehilangan kepercayaan.\n\nDosen bertanya: apa penyebab runtuhnya jembatan? Apakah masalah teknik (engineering)?"
+      title: "Kasus jembatan runtuh",
+      text: "Pemerintah kota membangun jembatan dengan anggaran Rp2 triliun. Sebagian pejabat diam-diam menerima suap, kontraktor memakai material lebih murah di bawah spesifikasi, dan laporan inspeksi dipalsukan. Jembatan diresmikan dan warga merayakannya.\n\nDua tahun kemudian jembatan runtuh. Keluarga kehilangan orang tercinta, usaha berhenti beroperasi, dan kota kehilangan kepercayaan.\n\nPertanyaannya: apa penyebab runtuhnya jembatan? Apakah cuma masalah teknik (engineering)?"
     },
     motor: {
-      title: "Kasus #5 Sesi 1: Naik motor",
-      text: "“Siapa di antara kalian yang memakai helm?”\n\nManajemen risiko yang baik: memakai helm, memeriksa rem, menaati aturan lalu lintas, tidak mengetik pesan sambil berkendara.\n\nManajemen risiko yang buruk: tanpa helm, ngebut melewati batas, main HP sambil berkendara, mengabaikan rambu peringatan.\n\nDosen bertanya: siapa yang lebih mungkin sampai dengan selamat?"
+      title: "Kasus naik motor",
+      text: "“Siapa di antara kalian yang memakai helm?”\n\nManajemen risiko yang baik: memakai helm, memeriksa rem, menaati aturan lalu lintas, tidak mengetik pesan sambil berkendara.\n\nManajemen risiko yang buruk: tanpa helm, ngebut melewati batas, main HP sambil berkendara, mengabaikan rambu peringatan.\n\nPertanyaannya: siapa yang lebih mungkin sampai dengan selamat?"
     }
   };
 })();

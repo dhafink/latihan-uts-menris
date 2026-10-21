@@ -261,6 +261,9 @@ kbd{font:600 11.5px/1 ui-monospace,Consolas,monospace;padding:2px 6px;border:1px
 .hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
 .heart{position:absolute;bottom:-70px;line-height:1;animation:floatUp var(--d) ease-in var(--delay) forwards;opacity:0}
 @keyframes floatUp{0%{transform:translate(0,0) rotate(0);opacity:0}8%{opacity:1}100%{transform:translate(var(--x),-118vh) rotate(var(--r));opacity:.85}}
+.big-heart{position:absolute;left:50%;top:42%;font-size:min(42vw,210px);line-height:1;opacity:0;transform:translate(-50%,-50%) scale(0);animation:bigHeart 3s ease .15s forwards;filter:drop-shadow(0 8px 24px rgba(233,30,99,.35))}
+@keyframes bigHeart{0%{transform:translate(-50%,-50%) scale(0);opacity:0}16%{transform:translate(-50%,-50%) scale(1.15);opacity:1}28%{transform:translate(-50%,-50%) scale(.94)}40%{transform:translate(-50%,-50%) scale(1.08)}52%{transform:translate(-50%,-50%) scale(.97)}74%{transform:translate(-50%,-50%) scale(1);opacity:1}100%{transform:translate(-50%,-50%) scale(1.3);opacity:0}}
+footer a{color:var(--accent);font-weight:600}
 @media (max-width:480px){ .fun{gap:12px;padding:12px} .fun-img{width:92px;height:118px} .bubble{font-size:15.5px} }
 @media (prefers-reduced-motion: reduce){ .fun-img{animation:none} .caret{display:none} }
 
@@ -462,7 +465,10 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
   </section>
 </main>
 
-<footer>Ada soal yang membingungkan? Catat <strong>ID soalnya</strong> (mis. <strong>T3-07</strong> atau <strong>E4-02</strong>) untuk didiskusikan bersama.</footer>
+<footer>
+  Ada soal yang membingungkan? Catat <strong>ID soalnya</strong> (mis. <strong>T3-07</strong> atau <strong>E4-02</strong>) untuk didiskusikan bersama.<br>
+  Intip tampilan hasil: <a href="#love">kalau semua benar</a> · <a href="#salah">kalau ada yang salah</a>
+</footer>
 
 <script>window.QUESTIONS = []; window.ESSAYS = [];</script>
 <script src="pendukung.js?v=2"></script>
@@ -485,7 +491,7 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
   };
   var NT = Object.keys(TOPICS).length;
   var LEVELS = { konsep: "Konsep", aplikasi: "Aplikasi", kasus: "Studi kasus" };
-  var SRC = { review: "Review Question asli Ch.1", materi: "Materi tortoic Ch.1", slide: "Slide dosen", literatur: "Literatur ISO/COSO" };
+  var SRC = { review: "Soal asli tortoic", materi: "Materi tortoic", slide: "Slide kuliah", literatur: "Literatur ISO/COSO" };
   var LETTERS = "ABCD";
   // prefix sendiri: situs ini satu origin (dhafink.github.io) dengan kuis Bisnis Keluarga
   var KEY_SESSION = "menrisKuis.session", KEY_STATS = "menrisKuis.stats", KEY_PREFS = "menrisKuis.prefs", KEY_THEME = "menrisKuis.theme", KEY_ESSAY = "menrisKuis.essay";
@@ -948,6 +954,7 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
       h.style.setProperty("--r", ((Math.random() - 0.5) * 70).toFixed(0) + "deg");
       box.appendChild(h);
     }
+    box.appendChild(el("span", "big-heart", "💖"));
     document.body.appendChild(box);
     setTimeout(function () { box.remove(); }, 11000);
   }
@@ -1011,7 +1018,29 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
     }
   });
 
+  /* ---------- pratinjau hasil: #love (semua benar) / #salah (ada yang salah) ---------- */
+  function demoResult(kind) {
+    var saved = store.get(KEY_SESSION, null);   // showResult menghapus sesi tersimpan; kembalikan setelahnya
+    var ids = shuffle(ALL.map(function (q) { return q.id; })).slice(0, 10), answers = {};
+    ids.forEach(function (id, i) {
+      var q = BY_ID[id];
+      answers[id] = kind === "salah" && i < 3 ? (q.answer + 1) % 4 : q.answer;
+    });
+    S = { ids: ids, perm: {}, idx: ids.length - 1, answers: answers, label: "Contoh hasil" };
+    ids.forEach(function (id) { S.perm[id] = [0, 1, 2, 3]; });
+    showResult();
+    if (saved) store.set(KEY_SESSION, saved);
+  }
+  function checkDemo() {
+    var h = location.hash.slice(1);
+    if (h !== "love" && h !== "salah") return;
+    history.replaceState(null, "", location.pathname + location.search);
+    demoResult(h);
+  }
+  window.addEventListener("hashchange", checkDemo);
+
   renderHome();
+  checkDemo();
 })();
 </script>
 </body>
