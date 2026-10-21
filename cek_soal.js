@@ -11,7 +11,7 @@ const dir = path.join(__dirname, "data");
 for (const f of fs.readdirSync(dir).filter(f => f.endsWith(".js")).sort()) run(path.join(dir, f));
 
 const { QUESTIONS: Q, ESSAYS: E, FIG, KASUS } = ctx.window;
-const TARGET = { 1: 14, 2: 8, 3: 8, 4: 10, 5: 10 };   // total 50 soal pilihan ganda
+const TARGET = { 1: 20, 2: 16, 3: 16, 4: 18, 5: 10 };  // total 80 soal pilihan ganda
 const SRC = ["review", "materi", "literatur", "slide"];
 const errors = [];
 const perTopic = {}, levels = {}, srcCount = {};

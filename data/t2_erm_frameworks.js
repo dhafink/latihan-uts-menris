@@ -2,6 +2,7 @@
 // Belum ada foto materi tortoic untuk chapter ini. Soal disusun dari literatur standar:
 // COSO ERM 2004 (Integrated Framework), COSO ERM 2017 (Integrating with Strategy and Performance), ISO 31000:2009/2018,
 // serta deskripsi program "ISO 31000 ERM Fundamentals" (CRMS Indonesia/ERM Academy).
+// T2-09..T2-16 = soal tambahan bahasa Inggris bergaya Review Questions tortoic.
 window.QUESTIONS.push(
 {
   id: "T2-01", topic: 2, level: "konsep", src: "literatur",
@@ -141,5 +142,126 @@ window.QUESTIONS.push(
     "Tidak ada ketentuan seperti itu; organisasi bebas memakai dan menyesuaikan kerangka yang cocok.",
     "COSO ERM (2004 dan 2017) adalah kerangka manajemen risiko perusahaan, berbeda dari COSO Internal Control.",
     "ISO 31000 tidak dimaksudkan untuk sertifikasi, jadi tidak ada syarat seperti itu."]
+},
+{
+  id: "T2-09", topic: 2, level: "konsep", src: "literatur",
+  q: "Which of the following best describes the scope of Enterprise Risk Management (ERM)?",
+  options: [
+    "Risks are managed only by the finance department",
+    "A company-wide process that cuts across business units and departments, considering end-to-end processes",
+    "A one-time risk assessment before launching a new project",
+    "A compliance report submitted to regulators every year"
+  ],
+  answer: 1,
+  explain: "Deskripsi program ISO 31000 ERM Fundamentals (CRMS/ERM Academy): with a company-wide scope, the risk management process serves as a strategic analysis of risk throughout an organization, cutting across business units and departments, and considering end-to-end processes.",
+  why: [
+    "ERM mencakup seluruh organisasi, bukan satu departemen.",
+    null,
+    "ERM berjalan terus-menerus dan terintegrasi, bukan penilaian sekali jalan.",
+    "ERM bukan sekadar laporan kepatuhan; ia bagian dari pengambilan keputusan strategis."]
+},
+{
+  id: "T2-10", topic: 2, level: "konsep", src: "literatur",
+  q: "How many components and principles are there in COSO ERM 2017 (Integrating with Strategy and Performance)?",
+  options: [
+    "8 components and 4 objective categories",
+    "3 components and 8 principles",
+    "5 components and 20 principles",
+    "11 principles and 1 framework"
+  ],
+  answer: 2,
+  explain: "COSO ERM 2017 punya 5 komponen (Governance & Culture; Strategy & Objective-Setting; Performance; Review & Revision; Information, Communication & Reporting) yang dijabarkan menjadi 20 prinsip.",
+  why: [
+    "Delapan komponen dan empat kategori sasaran adalah ciri COSO ERM 2004 (kubus).",
+    "Tiga komponen dan delapan prinsip mirip arsitektur ISO 31000:2018, bukan COSO.",
+    null,
+    "Sebelas prinsip adalah ISO 31000:2009."]
+},
+{
+  id: "T2-11", topic: 2, level: "konsep", src: "literatur",
+  q: "Which of the following is NOT one of the eight components of COSO ERM 2004 (Integrated Framework)?",
+  options: ["Event Identification", "Risk Response", "Monitoring", "Review & Revision"],
+  answer: 3,
+  explain: "Delapan komponen COSO ERM 2004: Internal Environment, Objective Setting, Event Identification, Risk Assessment, Risk Response, Control Activities, Information & Communication, dan Monitoring. Review & Revision adalah komponen COSO ERM 2017.",
+  why: [
+    "Event Identification adalah komponen COSO ERM 2004.",
+    "Risk Response adalah komponen COSO ERM 2004.",
+    "Monitoring adalah komponen COSO ERM 2004.",
+    null]
+},
+{
+  id: "T2-12", topic: 2, level: "konsep", src: "literatur",
+  q: "In the COSO ERM 2004 cube, which dimension shows Entity-Level, Division, Business Unit, and Subsidiary?",
+  options: [
+    "The objective categories (top of the cube)",
+    "The entity levels of the organisation (side of the cube)",
+    "The components (front of the cube)",
+    "The risk treatment options"
+  ],
+  answer: 1,
+  explain: "Kubus COSO ERM 2004 punya tiga dimensi: kategori sasaran di sisi atas (Strategic, Operations, Reporting, Compliance), delapan komponen di sisi depan, dan tingkat entitas di sisi samping (Entity-Level, Division, Business Unit, Subsidiary). Artinya ERM berlaku untuk setiap sasaran, setiap komponen, dan di setiap tingkat organisasi.",
+  why: [
+    "Sisi atas berisi Strategic, Operations, Reporting, Compliance.",
+    null,
+    "Sisi depan berisi delapan komponen, dari Internal Environment sampai Monitoring.",
+    "Pilihan perlakuan risiko bukan dimensi kubus COSO."]
+},
+{
+  id: "T2-13", topic: 2, level: "konsep", src: "literatur",
+  q: "What is the full title of ISO 31000:2018?",
+  options: [
+    "Risk management — Guidelines",
+    "Risk management — Requirements for certification",
+    "Enterprise Risk Management — Integrating with Strategy and Performance",
+    "Internal Control — Integrated Framework"
+  ],
+  answer: 0,
+  explain: "Judul lengkapnya ISO 31000:2018 Risk management — Guidelines. Karena berupa pedoman, standar ini bisa disesuaikan untuk organisasi apa pun dan tidak dimaksudkan untuk sertifikasi.",
+  why: [
+    null,
+    "ISO 31000 bukan standar persyaratan sertifikasi.",
+    "Ini judul COSO ERM 2017.",
+    "Ini judul COSO Internal Control."]
+},
+{
+  id: "T2-14", topic: 2, level: "konsep", src: "literatur",
+  q: "Which element sits at the centre of the ISO 31000:2018 risk management framework?",
+  options: ["Risk assessment", "Integration", "Leadership and commitment", "Recording and reporting"],
+  answer: 2,
+  explain: "Framework ISO 31000:2018 berpusat pada leadership and commitment dari pimpinan puncak dan organ pengawas, dikelilingi integration, design, implementation, evaluation, dan improvement.",
+  why: [
+    "Risk assessment adalah tahap dalam process, bukan pusat framework.",
+    "Integration adalah salah satu elemen di sekeliling pusat framework.",
+    null,
+    "Recording and reporting adalah tahap dalam process."]
+},
+{
+  id: "T2-15", topic: 2, level: "konsep", src: "literatur",
+  q: "Which of the following is a stage of the ISO 31000:2018 risk management PROCESS (not the framework)?",
+  options: ["Design", "Risk treatment", "Implementation", "Improvement"],
+  answer: 1,
+  explain: "Process ISO 31000:2018: communication & consultation; scope, context & criteria; risk assessment (identification, analysis, evaluation); risk treatment; monitoring & review; recording & reporting. Design, implementation, dan improvement adalah elemen framework.",
+  why: [
+    "Design adalah elemen framework.",
+    null,
+    "Implementation adalah elemen framework.",
+    "Improvement adalah elemen framework."]
+},
+{
+  id: "T2-16", topic: 2, level: "konsep", src: "literatur",
+  q: "Why do organisations adopt an ERM framework such as ISO 31000 or COSO ERM?",
+  options: [
+    "To guarantee that no risk will ever occur",
+    "To replace the role of the board of directors",
+    "To avoid the need to set objectives",
+    "To effectively assist risk management at varying levels and within the specific context of the organisation"
+  ],
+  answer: 3,
+  explain: "Deskripsi modul The ERM Frameworks (CRMS/ERM Academy): how ERM framework will effectively assist risk management at varying levels and within specific context of the organization. Kerangka membantu manajemen risiko berjalan konsisten di semua tingkat dan sesuai konteks.",
+  why: [
+    "Tidak ada kerangka yang bisa menjamin risiko tidak terjadi.",
+    "Kerangka mendukung dewan, bukan menggantikan perannya.",
+    "Justru risiko selalu dikaitkan dengan sasaran; tanpa sasaran tidak ada risiko.",
+    null]
 }
 );

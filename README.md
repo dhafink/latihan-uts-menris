@@ -1,23 +1,27 @@
 # Latihan UTS Manajemen Risiko
 
 Latihan soal UTS Manajemen Risiko (Corporate Governance & Risk Management, UNPAR):
-**50 soal pilihan ganda** dan **12 soal essay** dari 5 topik.
+**80 soal pilihan ganda** dan **12 soal essay** dari 5 topik.
 
 **Buka latihannya:** https://dhafink.github.io/latihan-uts-menris/
 
 | Topik | Materi | Pilihan ganda | Essay |
 |---|---|---|---|
-| 1 | Fundamentals to Risk Management (tortoic Chapter 1) | 14 | 3 |
-| 2 | Enterprise Risk Management Frameworks | 8 | 2 |
-| 3 | The Value of ERM | 8 | 2 |
-| 4 | ISO 31000 Architecture – Risk Management Principles | 10 | 3 |
+| 1 | Fundamentals to Risk Management (tortoic Chapter 1) | 20 | 3 |
+| 2 | Enterprise Risk Management Frameworks | 16 | 2 |
+| 3 | The Value of ERM | 16 | 2 |
+| 4 | ISO 31000 Architecture – Risk Management Principles | 18 | 3 |
 | 5 | Governance & Risk Management (slide kuliah Sesi 1–2) | 10 | 2 |
+
+Ada 40 soal berbahasa Inggris dengan gaya Review Questions tortoic: 10 soal asli Chapter 1 dan 30 soal tambahan.
+Soal lainnya berbahasa Indonesia. Semua pembahasan berbahasa Indonesia.
 
 ## Cara pakai
 **Pilihan ganda**
 1. Pilih topik, jumlah soal, dan apakah urutan soal mau diacak.
 2. Klik jawaban. Jawaban benar berwarna hijau, pilihan yang salah berwarna merah, lalu pembahasannya muncul.
 3. Di akhir sesi ada skor per topik dan tombol **Ulangi yang salah**.
+   Kalau ada jawaban salah, muncul foto penyemangat dengan pesan yang diketik. Kalau semuanya benar, muncul hujan love.
 
 **Essay**
 1. Klik **Mulai latihan essay**.

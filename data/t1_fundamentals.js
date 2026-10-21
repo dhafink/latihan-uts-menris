@@ -1,6 +1,7 @@
 // Topik 1 — Fundamentals to Risk Management (tortoic Chapter 1)
 // Sumber: foto materi Chapter 1 ("Risk vs Problem"; "Risk, Problem, Crisis, and Disaster"; "Review Questions").
 // T1-01..T1-10 = Review Questions asli Chapter 1 (bahasa Inggris, src "review"). T1-11..T1-14 = dari isi materi.
+// T1-15..T1-20 = soal tambahan bahasa Inggris bergaya Review Questions tortoic, disusun dari isi materi Chapter 1.
 window.QUESTIONS.push(
 {
   id: "T1-01", topic: 1, level: "konsep", src: "review",
@@ -228,5 +229,102 @@ window.QUESTIONS.push(
     "Materi menegaskan tidak ada “disaster management”; disaster hanya bisa dipulihkan (recovery).",
     null,
     "Disaster recovery plan bekerja setelah bencana terjadi; ia tidak mencegah masalah."]
+},
+{
+  id: "T1-15", topic: 1, level: "konsep", src: "materi",
+  q: "Many people assume that risk is a low-scale level of problem. Why is this assumption incorrect?",
+  options: [
+    "Because risk is the effect of uncertainty on objectives, a different concept from problem, since risk has not happened yet",
+    "Because risk is always bigger than a problem",
+    "Because risk is a problem that could not be measured by number",
+    "Because problems only happen in large organisations"
+  ],
+  answer: 0,
+  explain: "Materi Risk vs Problem: anggapan “risk is a low-scale level of problem” keliru. Risiko adalah konsep yang sama sekali berbeda dari masalah. Menurut ISO 31000 risiko adalah effect of uncertainty on objectives dan belum terjadi; masalah adalah realita yang sedang atau sudah terjadi.",
+  why: [
+    null,
+    "Risiko dan masalah dibedakan berdasarkan sudah/belum terjadinya, bukan besar-kecilnya.",
+    "Ini anggapan keliru kedua yang juga dibantah materi; risiko bukan “masalah yang tidak terukur”.",
+    "Materi tidak mengaitkan perbedaan risk dan problem dengan ukuran organisasi."]
+},
+{
+  id: "T1-16", topic: 1, level: "konsep", src: "materi",
+  q: "Everyone makes decisions in the present, hoping that those decisions could provide benefits or outcomes in the future. In Chapter 1, these future benefits are called…",
+  options: ["Uncertainties", "Objectives", "Problems", "Controls"],
+  answer: 1,
+  explain: "Materi: “we can call these future benefits as our objectives”. Keputusan dibuat di masa kini (present), sasarannya ada di masa depan (future), dan di antaranya ada jeda waktu yang penuh ketidakpastian.",
+  why: [
+    "Uncertainties adalah hal-hal tidak pasti di dalam jeda waktu, bukan manfaat yang diharapkan.",
+    null,
+    "Problem adalah risiko yang sudah terjadi.",
+    "Controls tidak dibahas sebagai istilah untuk manfaat masa depan."]
+},
+{
+  id: "T1-17", topic: 1, level: "konsep", src: "materi", fig: "waktu",
+  q: "Why are there always uncertainties between making a decision and achieving an objective?",
+  options: [
+    "Because every decision is made without any information",
+    "Because objectives are always set by other people",
+    "Because there is a time interval between when a person makes a decision and until that person achieves the objective",
+    "Because problems always happen right after a decision is made"
+  ],
+  answer: 2,
+  explain: "Materi: there is a time interval between when a person makes a decision and until that person achieves their objective; within that time, there are lots of uncertainties. Ketidakpastian yang dapat memengaruhi sasaran itulah yang disebut risiko.",
+  why: [
+    "Keputusan bisa saja dibuat dengan informasi lengkap; ketidakpastian tetap ada karena masa depan belum terjadi.",
+    "Siapa yang menetapkan sasaran tidak menentukan ada-tidaknya ketidakpastian.",
+    null,
+    "Masalah tidak selalu muncul setelah keputusan; risiko belum tentu terjadi."]
+},
+{
+  id: "T1-18", topic: 1, level: "kasus", src: "materi", kasus: "rax",
+  q: "In the RAX case, what was the main reason RAX was incapable of responding to the drastic business trend shifting?",
+  options: [
+    "RAX lacked working capital",
+    "RAX was hit by a natural-based disaster",
+    "As a family company, RAX really cared for its ancestral values",
+    "RAX’s suppliers stopped delivering materials"
+  ],
+  answer: 2,
+  explain: "Materi: “Since RAX is a family company that really cares for its ancestral values, it makes them incapable to respond these situations.” Pergeseran tren fashion yang cepat adalah risiko yang tidak direspons, sehingga berujung pada masalah reputasi, krisis, lalu disaster.",
+  why: [
+    "Kasus tidak menyebut kekurangan modal sebagai penyebab.",
+    "Kasus RAX tidak melibatkan bencana alam; disaster-nya berupa kebangkrutan.",
+    null,
+    "Kasus tidak menyebut masalah pemasok."]
+},
+{
+  id: "T1-19", topic: 1, level: "kasus", src: "materi", kasus: "rax", fig: "tangga:polos",
+  q: "Which event in the RAX case marks the point where RAX’s condition became a disaster?",
+  options: [
+    "Fashion trends started to shift rapidly",
+    "Bad news about RAX spread in international media",
+    "Consumers lost their interest in using RAX’s services",
+    "RAX declared bankruptcy after having US$100 billion in debt"
+  ],
+  answer: 3,
+  explain: "Materi: “RAX declared bankruptcy after having US$100 Billion in debt — and it is a clear disaster for RAX company.” Disaster adalah kondisi yang tidak bisa kembali ke keadaan semula. Urutannya: pergeseran tren (risk) → berita buruk (reputational problem) → konsumen pergi (crisis) → bangkrut (disaster).",
+  why: [
+    "Pergeseran tren masih berupa risiko bagi sasaran RAX.",
+    "Berita buruk yang menyebar adalah reputational problem.",
+    "Konsumen yang kehilangan minat membawa RAX ke krisis, belum disaster.",
+    null]
+},
+{
+  id: "T1-20", topic: 1, level: "aplikasi", src: "materi",
+  q: "A company’s warehouse collapses because the management repeatedly ignored maintenance reports, destroying the organisation from within. Based on Chapter 1, this is categorised as…",
+  options: [
+    "Natural-based disaster (external context)",
+    "Human-based disaster (internal context)",
+    "Crisis phase",
+    "Risk"
+  ],
+  answer: 1,
+  explain: "Human-based disaster disebabkan kegagalan atau kesalahan manusia, misalnya gedung runtuh (collapsed building), kebakaran, atau gagal meluncurkan produk baru, dan merusak organisasi dari dalam (internal context). Natural-based disaster disebabkan faktor alam dan datang dari luar.",
+  why: [
+    "Penyebabnya kelalaian manusia, bukan faktor alam.",
+    null,
+    "Crisis phase adalah banyak masalah dalam satu periode; gedung runtuh yang menghancurkan organisasi adalah disaster.",
+    "Kejadiannya sudah terjadi, jadi bukan lagi risiko."]
 }
 );

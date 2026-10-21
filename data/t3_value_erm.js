@@ -2,6 +2,7 @@
 // Belum ada foto materi tortoic untuk chapter ini. Soal disusun dari literatur standar:
 // ISO 31000:2018 (purpose: creation and protection of value), COSO ERM 2017 (risk appetite, enhanced value),
 // dan konsep upside/downside risk dari slide Sesi 2.
+// T3-09..T3-16 = soal tambahan bahasa Inggris bergaya Review Questions tortoic.
 window.QUESTIONS.push(
 {
   id: "T3-01", topic: 3, level: "konsep", src: "literatur",
@@ -139,5 +140,133 @@ window.QUESTIONS.push(
     null,
     "Audit internal memberi asurans independen; pengelolaan risiko tetap tanggung jawab manajemen dan pemilik risiko.",
     "Asuransi hanyalah salah satu cara transfer risiko."]
+},
+{
+  id: "T3-09", topic: 3, level: "konsep", src: "literatur",
+  q: "Based on the ISO 31000 definition of risk, the effect of uncertainty on objectives can be…",
+  options: ["Only negative", "Only positive", "Positive, negative, or both", "Neither positive nor negative"],
+  answer: 2,
+  explain: "ISO 31000: an effect is a deviation from the expected; it can be positive, negative, or both. Karena itu ERM mengelola dua sisi: upside risk (peluang) dan downside risk (ancaman).",
+  why: [
+    "Risiko tidak hanya negatif; ada sisi peluang (upside).",
+    "Risiko tidak hanya positif; ada sisi ancaman (downside).",
+    null,
+    "Efek berarti penyimpangan dari yang diharapkan, jadi pasti ke arah positif dan/atau negatif."]
+},
+{
+  id: "T3-10", topic: 3, level: "konsep", src: "literatur", fig: "kpikri:polos",
+  q: "When “bad things happen” and damage the value of the organisation, this side of risk is called…",
+  options: ["Upside risk", "Downside risk", "Opportunity", "Risk appetite"],
+  answer: 1,
+  explain: "Downside risk: bad things happen → damage to the value of the organization. Upside risk: good things do not happen → no creation of value. Ancaman dipantau dengan KRI, peluang dengan KPI.",
+  why: [
+    "Upside risk adalah peluang yang gagal ditangkap, bukan hal buruk yang terjadi.",
+    null,
+    "Opportunity adalah sisi positif, bukan hal buruk.",
+    "Risk appetite adalah besaran risiko yang bersedia diterima organisasi."]
+},
+{
+  id: "T3-11", topic: 3, level: "konsep", src: "literatur",
+  q: "When an organisation fails to capture an opportunity (“good things do not happen”), what is the consequence?",
+  options: [
+    "No creation of value",
+    "Damage to the value of the organization",
+    "A natural-based disaster",
+    "An increase in risk appetite"
+  ],
+  answer: 0,
+  explain: "Upside risk yang tidak dikelola membuat good things do not happen, sehingga tidak ada nilai yang tercipta (no creation of value). Inilah alasan ERM tidak boleh hanya fokus menghindari kerugian.",
+  why: [
+    null,
+    "Ini akibat downside risk (bad things happen).",
+    "Disaster alam tidak ada hubungannya dengan gagal menangkap peluang.",
+    "Selera risiko tidak berubah karena peluang terlewat."]
+},
+{
+  id: "T3-12", topic: 3, level: "konsep", src: "literatur",
+  q: "Which statement best describes how ERM adds value to an organisation?",
+  options: [
+    "ERM eliminates all risks",
+    "ERM only reduces insurance costs",
+    "ERM transfers responsibility for risk to regulators",
+    "ERM increases the likelihood of achieving objectives by managing both threats and opportunities"
+  ],
+  answer: 3,
+  explain: "ERM tidak menghilangkan risiko. ERM menaikkan peluang mencapai sasaran dengan mengendalikan ancaman (melindungi nilai) dan menangkap peluang (menciptakan nilai). Ini sejalan dengan kesimpulan Chapter 1 dan pesan kasus motor di Sesi 1.",
+  why: [
+    "Risiko tidak bisa dihilangkan seluruhnya.",
+    "Penghematan asuransi bukan inti nilai ERM.",
+    "Tanggung jawab risiko tetap di dalam organisasi, terutama dewan dan manajemen.",
+    null]
+},
+{
+  id: "T3-13", topic: 3, level: "aplikasi", src: "literatur",
+  q: "Which of the following is an example of value PROTECTION through ERM?",
+  options: [
+    "Launching a new product line after assessing market opportunities",
+    "Entering a new market while competitors are disrupted",
+    "Preparing backup suppliers so production continues when the main supplier fails",
+    "Increasing the marketing budget without any analysis"
+  ],
+  answer: 2,
+  explain: "Melindungi nilai berarti menjaga nilai yang sudah ada dari ancaman (downside risk). Pemasok cadangan membuat produksi tetap berjalan saat pemasok utama gagal, sehingga pendapatan dan kepercayaan pelanggan terlindungi.",
+  why: [
+    "Meluncurkan produk baru adalah penciptaan nilai (upside).",
+    "Masuk pasar baru saat pesaing terganggu adalah penciptaan nilai.",
+    null,
+    "Menambah anggaran tanpa analisis bukan praktik ERM."]
+},
+{
+  id: "T3-14", topic: 3, level: "aplikasi", src: "literatur",
+  q: "Which of the following is an example of value CREATION through ERM?",
+  options: [
+    "Installing fire extinguishers in the warehouse",
+    "Taking a measured risk to expand into a new city after analysing that it is within the risk appetite",
+    "Buying insurance for company vehicles",
+    "Backing up company data every day"
+  ],
+  answer: 1,
+  explain: "Menciptakan nilai berarti menangkap peluang (upside risk) dengan mengambil risiko yang terukur dan sesuai selera risiko. Ekspansi setelah analisis adalah contohnya. Tiga opsi lain adalah perlindungan nilai.",
+  why: [
+    "Alat pemadam melindungi aset dari kebakaran (perlindungan nilai).",
+    null,
+    "Asuransi kendaraan mentransfer risiko kerugian (perlindungan nilai).",
+    "Backup data melindungi dari kehilangan data (perlindungan nilai)."]
+},
+{
+  id: "T3-15", topic: 3, level: "konsep", src: "literatur",
+  q: "According to ISO 31000:2018, risk management that creates and protects value contributes to…",
+  options: [
+    "Improving performance, encouraging innovation, and supporting the achievement of objectives",
+    "Reducing the number of employees",
+    "Eliminating the need for a strategy",
+    "Guaranteeing profit every year"
+  ],
+  answer: 0,
+  explain: "ISO 31000:2018: the purpose of risk management is the creation and protection of value. It improves performance, encourages innovation and supports the achievement of objectives.",
+  why: [
+    null,
+    "Pengurangan karyawan bukan tujuan manajemen risiko.",
+    "Manajemen risiko justru terintegrasi dengan strategi.",
+    "Tidak ada yang bisa menjamin laba; risiko tetap ada."]
+},
+{
+  id: "T3-16", topic: 3, level: "aplikasi", src: "literatur",
+  ctxTitle: "Perawatan mesin",
+  ctx: "Sebuah pabrik mengeluarkan anggaran kecil untuk perawatan rutin mesin utama. Berkat itu, kerusakan yang bisa menghentikan produksi selama sebulan berhasil dihindari.",
+  q: "What does this case illustrate, according to Chapter 1 and the value of ERM?",
+  options: [
+    "Crisis management is the best way to achieve objectives",
+    "Preventive maintenance is a disaster recovery strategy",
+    "Risk management eliminates any possibility of machine breakdowns",
+    "Preventing problems before they occur is better than preparing to manage them after they occur"
+  ],
+  answer: 3,
+  explain: "Kesimpulan Chapter 1: “Why should you prepare to manage your organisation problems, if you could prevent those problems before it occurs?” Biaya pencegahan kecil melindungi nilai yang jauh lebih besar; inilah nilai ERM.",
+  why: [
+    "Crisis management baru bekerja setelah masalah membesar.",
+    "Disaster recovery adalah pemulihan setelah disaster, bukan pencegahan.",
+    "Perawatan menurunkan kemungkinan kerusakan, tetapi tidak menghilangkannya.",
+    null]
 }
 );

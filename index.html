@@ -250,6 +250,20 @@ kbd{font:600 11.5px/1 ui-monospace,Consolas,monospace;padding:2px 6px;border:1px
 .tag-ok{color:var(--ok);font-weight:700}
 .res-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 
+/* hasil: foto + kata-kata (ada yang salah) / hujan love (semua benar) */
+.fun{display:flex;gap:16px;align-items:center;margin-top:18px;padding:14px;border-radius:14px;background:var(--surface-2);border:1.5px dashed var(--border)}
+.fun-img{width:118px;height:150px;object-fit:cover;border-radius:12px;flex:none;transform:rotate(-3deg);box-shadow:0 4px 14px rgba(0,0,0,.18);border:3px solid var(--surface);animation:pop .5s ease both}
+.bubble{position:relative;flex:1;min-width:0;background:var(--accent-soft);border-radius:16px;padding:12px 15px;font-weight:600;font-size:16.5px;line-height:1.55;min-height:52px}
+.caret{display:inline-block;width:2px;height:1.05em;background:var(--text);margin-left:2px;vertical-align:-2px;animation:blink 1s steps(1) infinite}
+.caret.done{display:none}
+@keyframes blink{50%{opacity:0}}
+@keyframes pop{from{opacity:0;transform:rotate(-3deg) scale(.7)}to{opacity:1;transform:rotate(-3deg) scale(1)}}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.heart{position:absolute;bottom:-70px;line-height:1;animation:floatUp var(--d) ease-in var(--delay) forwards;opacity:0}
+@keyframes floatUp{0%{transform:translate(0,0) rotate(0);opacity:0}8%{opacity:1}100%{transform:translate(var(--x),-118vh) rotate(var(--r));opacity:.85}}
+@media (max-width:480px){ .fun{gap:12px;padding:12px} .fun-img{width:92px;height:118px} .bubble{font-size:15.5px} }
+@media (prefers-reduced-motion: reduce){ .fun-img{animation:none} .caret{display:none} }
+
 footer strong{white-space:nowrap}
 footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:center;color:var(--muted);font-size:13.5px}
 
@@ -425,6 +439,10 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
           <p id="resMsg" style="margin:8px 0 0"></p>
         </div>
       </div>
+      <div class="fun" id="funBox" hidden>
+        <img class="fun-img" id="funImg" src="img/semangat.jpg" alt="Foto penyemangat" hidden>
+        <div class="bubble" aria-live="polite"><span id="funText"></span><span class="caret" id="funCaret"></span></div>
+      </div>
       <div class="res-actions">
         <button class="btn primary" id="retryWrongBtn" type="button">Ulangi yang salah</button>
         <button class="btn" id="retrySameBtn" type="button">Ulangi sesi ini</button>
@@ -447,13 +465,13 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
 <footer>Ada soal yang membingungkan? Catat <strong>ID soalnya</strong> (mis. <strong>T3-07</strong> atau <strong>E4-02</strong>) untuk didiskusikan bersama.</footer>
 
 <script>window.QUESTIONS = []; window.ESSAYS = [];</script>
-<script src="pendukung.js?v=1"></script>
-<script src="data/t1_fundamentals.js?v=1"></script>
-<script src="data/t2_erm_frameworks.js?v=1"></script>
-<script src="data/t3_value_erm.js?v=1"></script>
-<script src="data/t4_iso31000_prinsip.js?v=1"></script>
-<script src="data/t5_governance_slide.js?v=1"></script>
-<script src="data/essay.js?v=1"></script>
+<script src="pendukung.js?v=2"></script>
+<script src="data/t1_fundamentals.js?v=2"></script>
+<script src="data/t2_erm_frameworks.js?v=2"></script>
+<script src="data/t3_value_erm.js?v=2"></script>
+<script src="data/t4_iso31000_prinsip.js?v=2"></script>
+<script src="data/t5_governance_slide.js?v=2"></script>
+<script src="data/essay.js?v=2"></script>
 <script>
 (function () {
   "use strict";
@@ -503,6 +521,7 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
   }
   function show(id) {
     ["home", "quiz", "essay", "result"].forEach(function (s) { $("#" + s).hidden = s !== id; });
+    if (id !== "result") { var hb = document.querySelector(".hearts"); if (hb) hb.remove(); }
     window.scrollTo(0, 0);
   }
   function isCorrect(id, sess) { var a = (sess || S).answers[id]; return a !== undefined && a === BY_ID[id].answer; }
@@ -888,6 +907,58 @@ footer{border-top:1px solid var(--border);padding:18px 16px 28px;text-align:cent
     });
     $("#retryWrongBtn").hidden = !wrong.length;
     show("result");
+    celebrate(wrong.length, total);
+  }
+
+  /* ---------- lucu-lucuan di hasil ---------- */
+  var REDUCED = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var typeTimer = null;
+
+  function funMessage(nWrong, total) {
+    if (!nWrong) return "Wiii, semua " + total + " soal benar! 🥳 Pinter banget, UTS besok pasti lancar ❤️";
+    if (nWrong === 1) return "Ihh, cuma salah 1 soal! Dikit lagi sempurna 🤏 Ulangi yang salah, aku yakin kamu bisa 💪";
+    if (nWrong <= 3) return "Yah, salah " + nWrong + " soal… gapapa! Baca pembahasannya, terus ulangi ya. Aku tunggu nilai A-nya ✨";
+    if (nWrong / total <= 0.5) return "Hmm, salah " + nWrong + " soal nih 🙈 Tarik napas, minum air dulu, terus coba lagi. Pelan-pelan pasti nempel kok!";
+    return "Waduh, " + nWrong + " soal masih salah 😆 Tenang, justru ini gunanya latihan. Ulangi yang salah dulu ya, semangaaat! 💪";
+  }
+
+  function typeText(target, caret, text) {
+    clearInterval(typeTimer);
+    var chars = Array.from(text), i = 0;
+    caret.classList.remove("done");
+    if (REDUCED) { target.textContent = text; caret.classList.add("done"); return; }
+    target.textContent = "";
+    typeTimer = setInterval(function () {
+      target.textContent += chars[i++];
+      if (i >= chars.length) { clearInterval(typeTimer); caret.classList.add("done"); }
+    }, 45);
+  }
+
+  function rainHearts() {
+    if (REDUCED) return;
+    var old = document.querySelector(".hearts"); if (old) old.remove();
+    var box = el("div", "hearts"), kinds = ["❤️", "💖", "💕", "💗", "💘", "🩷"];
+    for (var i = 0; i < 60; i++) {
+      var h = el("span", "heart", kinds[i % kinds.length]);
+      h.style.left = (Math.random() * 100) + "vw";
+      h.style.fontSize = (18 + Math.random() * 26) + "px";
+      h.style.setProperty("--d", (4 + Math.random() * 3).toFixed(2) + "s");
+      h.style.setProperty("--delay", (Math.random() * 3.5).toFixed(2) + "s");
+      h.style.setProperty("--x", ((Math.random() - 0.5) * 160).toFixed(0) + "px");
+      h.style.setProperty("--r", ((Math.random() - 0.5) * 70).toFixed(0) + "deg");
+      box.appendChild(h);
+    }
+    document.body.appendChild(box);
+    setTimeout(function () { box.remove(); }, 11000);
+  }
+
+  function celebrate(nWrong, total) {
+    var img = $("#funImg");
+    img.hidden = !nWrong;
+    if (nWrong) { img.style.animation = "none"; void img.offsetWidth; img.style.animation = ""; } // putar ulang animasi muncul
+    $("#funBox").hidden = false;
+    typeText($("#funText"), $("#funCaret"), funMessage(nWrong, total));
+    if (!nWrong) rainHearts();
   }
 
   /* ---------- event ---------- */

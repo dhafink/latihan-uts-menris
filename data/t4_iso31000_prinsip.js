@@ -1,6 +1,7 @@
 // Topik 4 — ISO 31000 Architecture: Risk Management Principles
 // Belum ada foto materi tortoic untuk chapter ini. Soal disusun dari ISO 31000:2018 klausul 3–4
 // (purpose, delapan prinsip) dan arsitektur principles–framework–process.
+// T4-11..T4-18 = soal tambahan bahasa Inggris bergaya Review Questions tortoic.
 window.QUESTIONS.push(
 {
   id: "T4-01", topic: 4, level: "konsep", src: "literatur", fig: "iso31000:q",
@@ -143,5 +144,116 @@ window.QUESTIONS.push(
     null,
     "Inclusive menyangkut pelibatan pemangku kepentingan.",
     "Dynamic menyangkut tanggapan terhadap perubahan konteks."]
+},
+{
+  id: "T4-11", topic: 4, level: "konsep", src: "literatur",
+  q: "How many risk management principles are listed in ISO 31000:2018?",
+  options: ["5", "8", "11", "20"],
+  answer: 1,
+  explain: "ISO 31000:2018 memuat 8 prinsip: integrated; structured and comprehensive; customized; inclusive; dynamic; best available information; human and cultural factors; continual improvement. Versi 2009 memuat 11 prinsip, sedangkan 20 adalah jumlah prinsip COSO ERM 2017.",
+  why: [
+    "Lima adalah jumlah komponen COSO ERM 2017.",
+    null,
+    "Sebelas adalah jumlah prinsip ISO 31000:2009.",
+    "Dua puluh adalah jumlah prinsip COSO ERM 2017."]
+},
+{
+  id: "T4-12", topic: 4, level: "konsep", src: "literatur",
+  q: "Which principle states that risk management is an integral part of all organizational activities?",
+  options: ["Integrated", "Inclusive", "Customized", "Dynamic"],
+  answer: 0,
+  explain: "Integrated: risk management is an integral part of all organizational activities. Manajemen risiko bukan kegiatan terpisah, melainkan menyatu dengan strategi, anggaran, operasi, dan proyek.",
+  why: [
+    null,
+    "Inclusive menyangkut pelibatan pemangku kepentingan.",
+    "Customized menyangkut penyesuaian dengan konteks dan sasaran organisasi.",
+    "Dynamic menyangkut tanggapan terhadap perubahan konteks dan risiko."]
+},
+{
+  id: "T4-13", topic: 4, level: "konsep", src: "literatur",
+  q: "According to ISO 31000:2018, a structured and comprehensive approach to risk management contributes to…",
+  options: [
+    "Faster decisions without any data",
+    "The elimination of all uncertainties",
+    "Consistent and comparable results",
+    "Lower insurance premiums"
+  ],
+  answer: 2,
+  explain: "Structured and comprehensive: a structured and comprehensive approach to risk management contributes to consistent and comparable results. Hasil penilaian risiko antar-unit atau antar-periode jadi bisa dibandingkan.",
+  why: [
+    "Pendekatan terstruktur justru membutuhkan data dan metode yang jelas.",
+    "Ketidakpastian tidak bisa dihilangkan.",
+    null,
+    "Premi asuransi tidak disebut dalam prinsip ini."]
+},
+{
+  id: "T4-14", topic: 4, level: "konsep", src: "literatur",
+  q: "The principle “customized” means that the risk management framework and process are…",
+  options: [
+    "Copied from the best-practice template of another industry",
+    "Customized and proportionate to the organization’s external and internal context related to its objectives",
+    "Designed only by external consultants",
+    "Updated only once every few years"
+  ],
+  answer: 1,
+  explain: "Customized: the risk management framework and process are customized and proportionate to the organization’s external and internal context related to its objectives. Rumah sakit tidak boleh sekadar menyalin template bank.",
+  why: [
+    "Menyalin template industri lain justru bertentangan dengan prinsip customized.",
+    null,
+    "Prinsip ini tidak mengatur siapa yang merancang.",
+    "Jarang diperbarui bertentangan dengan prinsip dynamic."]
+},
+{
+  id: "T4-15", topic: 4, level: "konsep", src: "literatur",
+  q: "Which principle emphasises that risks can emerge, change or disappear as an organization’s external and internal context changes?",
+  options: ["Continual improvement", "Best available information", "Dynamic", "Human and cultural factors"],
+  answer: 2,
+  explain: "Dynamic: risks can emerge, change or disappear as an organization’s external and internal context changes. Risk management anticipates, detects, acknowledges and responds to those changes and events in an appropriate and timely manner.",
+  why: [
+    "Continual improvement menyangkut perbaikan lewat pembelajaran dan pengalaman.",
+    "Best available information menyangkut kualitas informasi yang dipakai.",
+    null,
+    "Human and cultural factors menyangkut pengaruh perilaku dan budaya."]
+},
+{
+  id: "T4-16", topic: 4, level: "konsep", src: "literatur",
+  q: "Under the principle “best available information”, the information used in risk management should be…",
+  options: [
+    "Based only on historical data",
+    "Kept confidential from all stakeholders",
+    "Perfect and free of uncertainty before any decision is made",
+    "Timely, clear and available to relevant stakeholders, taking into account its limitations and uncertainties"
+  ],
+  answer: 3,
+  explain: "Best available information: inputs are based on historical and current information, as well as on future expectations. Risk management explicitly takes into account any limitations and uncertainties; information should be timely, clear and available to relevant stakeholders.",
+  why: [
+    "Informasi historis saja tidak cukup; perlu informasi terkini dan ekspektasi masa depan.",
+    "Informasi justru harus tersedia bagi pemangku kepentingan terkait.",
+    "Informasi sempurna tidak pernah ada; keterbatasannya harus diperhitungkan, bukan ditunggu hilang.",
+    null]
+},
+{
+  id: "T4-17", topic: 4, level: "konsep", src: "literatur",
+  q: "Which principle states that human behaviour and culture significantly influence all aspects of risk management at each level and stage?",
+  options: ["Inclusive", "Human and cultural factors", "Integrated", "Structured and comprehensive"],
+  answer: 1,
+  explain: "Human and cultural factors: human behaviour and culture significantly influence all aspects of risk management at each level and stage. Ini sejalan dengan Sesi 1: governance pada akhirnya soal perilaku manusia.",
+  why: [
+    "Inclusive menyangkut pelibatan pemangku kepentingan.",
+    null,
+    "Integrated menyangkut menyatunya manajemen risiko dengan semua aktivitas.",
+    "Structured and comprehensive menyangkut konsistensi dan keterbandingan hasil."]
+},
+{
+  id: "T4-18", topic: 4, level: "konsep", src: "literatur",
+  q: "Appropriate and timely involvement of stakeholders, so that their knowledge, views and perceptions are considered, describes which principle?",
+  options: ["Inclusive", "Dynamic", "Customized", "Continual improvement"],
+  answer: 0,
+  explain: "Inclusive: appropriate and timely involvement of stakeholders enables their knowledge, views and perceptions to be considered. This results in improved awareness and informed risk management.",
+  why: [
+    null,
+    "Dynamic menyangkut tanggapan terhadap perubahan konteks.",
+    "Customized menyangkut penyesuaian dengan konteks organisasi.",
+    "Continual improvement menyangkut perbaikan lewat pembelajaran dan pengalaman."]
 }
 );
